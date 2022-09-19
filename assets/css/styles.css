@@ -1,0 +1,14 @@
+.hero-img-text {
+    margin-top: 100px;
+    width: 500px;
+    font-weight: bold;
+}
+
+.most-popular {
+    margin-top: 75px;
+}
+
+#carouselExampleCaptions {
+    width: 35%;
+    align-items: center;
+}
