@@ -8,6 +8,7 @@ window.onload = function(){
         mountainsArray = mountains.mountains;
     })
 
+    console.log(mountainsArray)
 }
 
 //function that can "fetch" the sunset/sunrise times
