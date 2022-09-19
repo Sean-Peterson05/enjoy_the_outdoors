@@ -30,7 +30,7 @@
                   <a class="nav-link" aria-current="page" href="index.html">WikiOutdoors</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="national_parks.html">National Parks</a>
+                  <a class="nav-link" id="natparks_link" href="national_parks.html">National Parks</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Mountains</a>
@@ -50,21 +50,38 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
                 <h1 class="mb-3">Find Your Adventure</h1>
-                <a class="btn btn-outline-light btn-lg" id = "nat-parks-btn" href="national_parks.html" role="button">National Parks</a>
-                <a class="btn btn-outline-light btn-lg" href="#!" role="button">Mountains</a>
-                <p class="hero-img-text"> Tired of being in stuck in your home? Are you an adernaline junkie? We have you covered.
-                 Our site specializes in finding national parks to enjoy and mountains to climb. </p>
+                <a class="btn btn-outline-light btn-lg" id = "nat-parks-btn" href="#!" role="button">View all National Parks</a>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="byLocation">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      By Location
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="byParktype">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      By Park Type
+                    </label>
+                  </div>
+                
               </div>
             </div>
         </div>
         <!-- Background image -->
       </header>
 
+      <div id="dropdown">
+    </div>
       <!-- Most Popular -->
       <div class ="d-flex justify-content-center align-items-center h-100 most-popular">
-        <h1> Most Popular</h1>
+        <h1> National Parks</h1>
+        <p> Filtered by: ... </p>
       </div>
 
+      <div class="container">
+        <div class="row" id="shop">
+        </div>
+      </div>
     <!-- Most Popular -->
 
     <!-- Bootstrap Bundle with Popper -->
