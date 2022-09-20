@@ -19,9 +19,9 @@
     padding-left: 15px;
 }
 
-.container {
+/* .container {
     justify-content: center;
-}
+} */
 
 #ptype-dropdown {
     width: 50%;
@@ -38,3 +38,22 @@
 #nat-parks-btn {
     margin-top: 25px;
 }
+
+.phone-img {
+    justify-content: flex-end;
+    width: 5%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+ .radio-btns {
+    display: block;
+ }

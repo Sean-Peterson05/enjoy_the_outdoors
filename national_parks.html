@@ -50,21 +50,9 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
                 <h1 class="mb-3">Find Your Adventure</h1>
-                <!-- <a class="btn btn-outline-light btn-lg" id = "nat-parks-btn" href="#!" role="button">View all National Parks</a>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="byLocation">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      By Location
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="byParktype">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      By Park Type
-                    </label>
-                  </div> -->
-                
+                <a class="btn btn-outline-light btn-lg" id = "nat-parks-btn" href="#!" role="button">View all National Parks</a>
               </div>
+
             </div>
         </div>
         <!-- Background image -->
@@ -73,32 +61,30 @@
       
 
     <div class ="d-flex justify-content-center align-items-center h-100">
-        <h3> Find a National Park</h3>
-    </div>  
+        <h3> Results </h3>
+    </div> 
 
     <div class="natParks-side-filter">
         <h3> Search By </h3>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="byLocation">
-            <label class="form-check-label" for="flexRadioDefault1">
-                By Location
+            <label class="radio-inline" for="flexRadioDefault1">
+              By Location
             </label>
-        <div id="loc-dropdown"></div>
+            <div id="loc-dropdown"></div>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="byParktype">
-            <label class="form-check-label" for="flexRadioDefault2">
+            <label class="radio-inline" for="flexRadioDefault2">
               By Park Type
             </label>
-        </div>
-        <div id="ptype-dropdown"></div>
-                
-        <a class="btn btn-outline-dark btn-md" id = "nat-parks-btn" href="#!" role="button">View National Parks</a>
+            <div id="ptype-dropdown"></div>
+        </div>         
     </div>
 
+    <!-- Container with the National Parks Cards-->
       <div class="container">
-        <div class="row" id="shop">
-        </div>
+        <div class="row" id="shop"></div>
       </div>
     <!-- Most Popular -->
 
