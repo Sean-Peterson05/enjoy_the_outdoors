@@ -12,9 +12,29 @@
     width: 35%;
     align-items: center;
 }
-  #Explore-by-Category{
-    margin-top: 50px;
-  }
-.vertical-menu {
-    margin: 25px;
+
+.natParks-side-filter {
+    float: left;
+    width: 25%;
+    padding-left: 15px;
+}
+
+.container {
+    justify-content: center;
+}
+
+#ptype-dropdown {
+    width: 50%;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+#loc-dropdown {
+    width: 50%;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+#nat-parks-btn {
+    margin-top: 25px;
 }
