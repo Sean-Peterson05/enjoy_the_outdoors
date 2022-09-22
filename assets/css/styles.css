@@ -1,48 +1,58 @@
-.hero-img-text {
-    margin-top: 100px;
-    width: 500px;
+/* Google Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+/*Home Page CSS */
+
+* {
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
     font-weight: bold;
 }
-
-.most-popular {
-    margin-top: 75px;
+.hero-img-text {
+    margin-top: 25px;
+    width: 500px;
+    font-weight: bolder;
+    color: black;
+    font-size: large;
 }
 
-#carouselExampleCaptions {
-    width: 35%;
-    align-items: center;
+.checked {
+    color: orange;
+  }
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
+
 
 .natParks-side-filter {
     float: left;
-    width: 25%;
+    width: 20%;
     padding-left: 15px;
 }
 
-/* .container {
-    justify-content: center;
-} */
-
+.float-right {
+    float: right;
+    max-width: 100px;
+}
 #ptype-dropdown {
     width: 50%;
-    margin-top: 25px;
-    padding-left: 10px;
+    margin-top: 10px;
+    padding-left: 0px;
 }
 
 #loc-dropdown {
     width: 50%;
-    margin-top: 25px;
-    padding-left: 10px;
+    margin-top: 10px;
+    padding-left: 0px;
 }
 
 #nat-parks-btn {
     margin-top: 25px;
 }
 
-.phone-img {
-    justify-content: flex-end;
-    width: 5%;
-}
 
 /* Dropdown Button */
 .dropbtn {
