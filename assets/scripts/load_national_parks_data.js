@@ -81,8 +81,20 @@ function locationFilter() {
     console.log("Function was called")
 
     let content = '';
+
+    // Remove featured header and elements from page if they exist
+    if(document.contains(document.getElementById('featured_parks'))){
+        document.getElementById('featured_parks').remove()
+    }
+
+    if(document.contains(document.getElementById('featured_parks_head'))){
+        document.getElementById('featured_parks_head').remove()
+    }
+
+
     let location_select = document.getElementById('location-select');
     let location_select_text = location_select.options[location_select.selectedIndex].text;
+
     console.log(location_select_text);
     nationalParksArray.forEach(p => {
 
@@ -97,11 +109,12 @@ function locationFilter() {
             <div class = "card-deck p-3">
             <div class="card">
                 <div class="card-body">
+                    <img class = "float-right" src ='assets/images/national_park_icon.jpg'>
                     <h5 class="card-title">${p.LocationName}</h5>
                     <p class="card-text">${p.Address}</p>
                     <p class="card-text">${location}</p>
+                    <p>${p.Fax} </p>
                     <a href="${website}" class="btn btn-primary" target="_blank"> Official Website </a>
-                    <img src="assets/images/national_park_icon.jpg" class="phone-img" alt="..."> <p>${p.Fax} </p>
                 </div>
             </div>
             </div>
@@ -119,6 +132,16 @@ function typeFilter() {
     let park_type_select = document.getElementById('park_type-select');
     let park_type_text = park_type_select.options[park_type_select.selectedIndex].text;
     console.log(park_type_text);
+
+    // Remove featured header and elements from page if they exist
+    if(document.contains(document.getElementById('featured_parks'))){
+        document.getElementById('featured_parks').remove()
+    }
+
+    if(document.contains(document.getElementById('featured_parks_head'))){
+        document.getElementById('featured_parks_head').remove()
+    }
+
     nationalParksArray.forEach(p => {
 
         if(p.LocationName.includes(park_type_text)){
@@ -132,11 +155,12 @@ function typeFilter() {
             <div class = "card-deck p-3">
             <div class="card">
                 <div class="card-body">
+                    <img class = "float-right" src ='assets/images/national_park_icon.jpg'>
                     <h5 class="card-title">${p.LocationName}</h5>
                     <p class="card-text">${p.Address}</p>
                     <p class="card-text">${location}</p>
+                    <p>${p.Fax} </p>
                     <a href="${website}" class="btn btn-primary" target="_blank"> Official Website </a>
-                    <img src="assets/images/phone_icon.jpg" class="phone-img" alt="..."> <p>${p.Fax} </p>
                 </div>
             </div>
             </div>
@@ -153,6 +177,15 @@ natParksbtn.addEventListener("click", function() {
     document.querySelector("#loc-dropdown").innerHTML = '';
     document.querySelector("#ptype-dropdown").innerHTML = '';
 
+    // Remove featured header and elements from page if they exist
+    if(document.contains(document.getElementById('featured_parks'))){
+        document.getElementById('featured_parks').remove()
+    }
+
+    if(document.contains(document.getElementById('featured_parks_head'))){
+        document.getElementById('featured_parks_head').remove()
+    }
+
     let content = '';
     nationalParksArray.forEach(p => {
 
@@ -165,11 +198,12 @@ natParksbtn.addEventListener("click", function() {
         <div class = "card-deck p-3">
         <div class="card">
             <div class="card-body">
+                <img class = "float-right" src ='assets/images/national_park_icon.jpg'>
                 <h5 class="card-title">${p.LocationName}</h5>
                 <p class="card-text">${p.Address}</p>
                 <p class="card-text">${location}</p>
+                <p>${p.Fax} </p>
                 <a href="${website}" class="btn btn-primary" target="_blank"> Official Website </a>
-                <img src="assets/images/phone_icon.jpg" class="phone-img" alt="..."> <p>${p.Fax} </p>
             </div>
         </div>
         </div>
