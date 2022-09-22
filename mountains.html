@@ -63,6 +63,11 @@
       </div> 
 
     <!-- Button to trigger mountains filter -->
+    <!-- <button id="showMe">Show me the mountains</button>
+
+    <select id="mountainNames" class="d-none">
+      <option>Choose a mountain</option>
+    </select> -->
     <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <a class="btn btn-outline-dark btn-sm" id = "show-me-btn" href="#!" role="button">Search for Mountain</a>
@@ -70,9 +75,10 @@
     </div>
 
     <!--Mountains filter dropdown -->
-    <select class="form-select form-select-sm d-flex justify-content-center align-items-center" aria-label="Default select example" id = "mts-drop">
-        <option selected>Select a Mountain</option>
-    </select>`
+    <select class="d-none" aria-label="Default select example" id = "mts_drop" onchange = "if (this.selectedIndex) mountainFilter();">
+        <option >Select a Mountain</option>
+    </select>
+
     <!-- <select class="form-select form-select-sm d-flex justify-content-center align-items-center" aria-label="Default select example" id = "mts-drop">
         <option selected>Select a Mountain</option>
         </select> -->
