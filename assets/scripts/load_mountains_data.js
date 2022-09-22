@@ -33,6 +33,15 @@ function mountainFilter(){
     let mountain_select_text = mountain_select.options[mountain_select.selectedIndex].text;
     console.log(mountain_select_text);
 
+        // Remove featured header and elements from page if they exist
+        if(document.contains(document.getElementById('featured_parks'))){
+            document.getElementById('featured_parks').remove()
+        }
+    
+        if(document.contains(document.getElementById('featured_parks_head'))){
+            document.getElementById('featured_parks_head').remove()
+        }
+
     mountainsArray.forEach(p => {
 
         if(mountain_select_text === p.name){

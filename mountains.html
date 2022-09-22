@@ -17,7 +17,7 @@
 <body>
     <header>
         <!-- Navbar -->
-        <nav class=" navbar navbar-expand-lg navbar-dark" style="background-color: #DE591C;">
+        <nav class=" navbar navbar-expand-lg navbar-light" style="background-color: #F2F8F7;">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
@@ -33,7 +33,7 @@
                   <a class="nav-link" href="national_parks.html">National Parks</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Mountains</a>
+                  <a class="nav-link" href="mountains.html">Mountains</a>
                 </li>
               </ul>
             </div>
@@ -43,41 +43,87 @@
       
         <!-- Background image -->
         <div class="p-5 text-center bg-image" style="
-            background-image: url('./assets/images/Hero_Image.jpg');
-            height: 400px;
+            background-image: url('./assets/images/hero_img_2.jpg');
+            height: 600px;
             background-size: cover;
           ">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
-                <h1 class="mb-3">Find Your Adventure</h1>
-                <a class="btn btn-outline-light btn-lg" id = "all-mtns-btn" href="#!" role="button">View all Mountains</a>
+                <h1 class="mb-3" style="font-weight:bold;">Find Your Adventure</h1>
+                <a class="btn btn-outline-light btn-lg" id = "all-mtns-btn" href="#!" role="button" style="font-weight:bold;">View all Mountains</a>
+                <a class="btn btn-outline-light btn-lg" id = "show-me-btn" href="#!" role="button" style="font-weight:bold;">Search for Mountain</a>
+                <div>
+                  <select class="d-none" aria-label="Default select example" id = "mts_drop" onchange = "if (this.selectedIndex) mountainFilter();">
+                    <option >Select a Mountain</option>
+                  </select>
+                </div>
               </div>
+
             </div>
         </div>
+        
         <!-- Background image -->
       </header>
-
+    <!--Mountains filter dropdown -->
+    <!-- <div>
+    <select class="d-none" aria-label="Default select example" id = "mts_drop" onchange = "if (this.selectedIndex) mountainFilter();">
+      <option >Select a Mountain</option>
+    </select>
+  </div> -->
       <!-- Results Header-->
-      <div class ="d-flex justify-content-center align-items-center h-100">
-        <h3> Results </h3>
-      </div> 
+      <div class ="d-flex justify-content-center align-items-center h-100" id="featured_parks_head">
+        <h3> Featured Mountains </h3>
+    </div> 
 
-    <!-- Button to trigger mountains filter -->
-    <!-- <button id="showMe">Show me the mountains</button>
+    <div class="card-group" id="featured_parks">
+      <div class="card">
+        <img src="assets/images/mountains/Moosilauke-StoryImage_2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mt. Moosilauke</h5>
+          <p class="card-text">Mount Moosilauke, at 4,802 feet, is the western-most 4,000-footer in NH. The alpine summit, on a clear day, affords hikers stunning views, to the east, of the Franconia Ridge and Presidentials, and to the west, the Green Mountains of Vermont and, in the distance, the Adirondacks in New York State.</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/mountains/Moriah-StoryImg.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mt. Moriah</h5>
+          <p class="card-text">A part of the Carter-Moriah Range, Mount Moriah (4,049 ft.), boasts a ledgy summit with views of the surrounding area.</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/Acadia_nat_park.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Acadia National Park</h5>
+          <p class="card-text">Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage.</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+    </div>
 
-    <select id="mountainNames" class="d-none">
-      <option>Choose a mountain</option>
-    </select> -->
-    <div class="d-flex justify-content-center align-items-center h-100">
+    <!-- <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <a class="btn btn-outline-dark btn-sm" id = "show-me-btn" href="#!" role="button">Search for Mountain</a>
         </div>
-    </div>
+    </div> -->
 
     <!--Mountains filter dropdown -->
-    <select class="d-none" aria-label="Default select example" id = "mts_drop" onchange = "if (this.selectedIndex) mountainFilter();">
+    <!-- <select class="d-none" aria-label="Default select example" id = "mts_drop" onchange = "if (this.selectedIndex) mountainFilter();">
         <option >Select a Mountain</option>
-    </select>
+    </select> -->
 
     <!-- <select class="form-select form-select-sm d-flex justify-content-center align-items-center" aria-label="Default select example" id = "mts-drop">
         <option selected>Select a Mountain</option>
