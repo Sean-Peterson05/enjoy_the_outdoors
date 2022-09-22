@@ -101,7 +101,7 @@ function locationFilter() {
                     <p class="card-text">${p.Address}</p>
                     <p class="card-text">${location}</p>
                     <a href="${website}" class="btn btn-primary" target="_blank"> Official Website </a>
-                    <img src="assets/images/phone_icon.jpg" class="phone-img" alt="..."> <p>${p.Fax} </p>
+                    <img src="assets/images/national_park_icon.jpg" class="phone-img" alt="..."> <p>${p.Fax} </p>
                 </div>
             </div>
             </div>

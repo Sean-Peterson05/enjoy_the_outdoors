@@ -104,6 +104,8 @@ viewAllmtnsbtn.addEventListener("click", function () {
 
     //console.log(viewAllmtns);
 
+
+
     let content = '';
     mountainsArray.forEach(p => {
 
@@ -116,12 +118,20 @@ viewAllmtnsbtn.addEventListener("click", function () {
             <p class="card-text">${p.desc}</p>
             <p class="card-text">Intensity: ${p.effort}</p>
             <p class="card-text">Elevation: ${p.elevation} feet </p>
+            <p class="card-text">Sunset/Sunrise (UTC): ${p.coords.lat}</p>
           </div>
         </div>
         `
     });
     document.querySelector("#shop2").innerHTML = content;
 });
+
+//function that can "fetch" the sunset/sunrise times
+async function getSunsetForMountain(lat, lng){
+    let response = await fetch(`http://api.sunrise-sunset.org/json?lat=${p.lat}&lng=${p.lng}&date=today`)
+    let data = await response.json()
+    return data
+}
 
 
 // create variable of what is selected
