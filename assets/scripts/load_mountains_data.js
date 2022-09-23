@@ -62,10 +62,6 @@ function mountainFilter(){
     document.querySelector("#shop2").innerHTML = content;
 }
 
-    
-
-
-
 // on change of dropdown filter results for the value selected
 
 //function that can "fetch" the sunset/sunrise times
@@ -75,48 +71,24 @@ let loadJsonData = async (path) => {
     return data
 }
 
-// function loadNames(mountainsArray) {
-//     mountainsArray.forEach((mountain) => {
-//         mtsdrop.innerHTML += wrapAsOption(mountain.name)
-//     })
-// }
-
-// showMeButton.addEventListener("click", () => {
-//     loadNames(mountainsArray)
-//     mountainNamesDropDown.classList.remove("d-none")
-//     infoTable.classList.add("d-none")
-// })
-
-// Populate Mountain dropdown with mountains array 
-// mtnsDropdown.addEventListener('click', function () {
-
-//     console.log("Mountains Drop Down Populated")
-
-
-    // let content4 = `<select class="form-select" id="mtn-select" aria-label="Default select example">
-    //                 <option selected>Select a Mountain</option>';
-    //                 `;
-    // let i = 1;
-    // mountainsArray.forEach(p => {
-
-    //     content4 += `<option value=${i}>${p.name}</option>`;
-    //     i += 1;
-    // });
-
-    // content4 += '</select>';
-
-    // document.querySelector("#mts-drop").innerHTML = content4;
-// })
-
 // Create view all mountains function from mountain button - feed mountain details into html 
 viewAllmtnsbtn.addEventListener("click", function () {
 
-    //console.log(viewAllmtns);
-
+        // Remove featured header and elements from page if they exist
+        if(document.contains(document.getElementById('featured_parks'))){
+            document.getElementById('featured_parks').remove()
+        }
+    
+        if(document.contains(document.getElementById('featured_parks_head'))){
+            document.getElementById('featured_parks_head').remove()
+        }
 
 
     let content = '';
     mountainsArray.forEach(p => {
+
+        //let lat_coords = p.coords.lat;
+        //let lng_coords = p.coords.lng;
 
         let imageSrc = "assets/images/mountains/" + p.img;
         content +=
@@ -142,42 +114,3 @@ async function getSunsetForMountain(lat, lng){
     return data
 }
 
-
-// create variable of what is selected
-// event will have a target that is the object they selected
-
-
-// , {once : true}
-
-// Create function that filters cards by mountain selected 
-// Need to create a button that executes the below function 
-// showMebtn.addEventListener('click', () => {
-
-
-//         console.log("filter function ran");
-//         let content = '';
-//         let mtn_select = document.getElementById('mtn-select');
-//         let mtn_select_text = mtn_select.options[mtn_select.selectedIndex].text;
-//         console.log(mtn_select_text);
-//         mountainsArray.forEach(p => {
-
-//             if (p.Name === mtn_select_text) {
-
-//                 let imageSrc = "assets/images/mountains/" + p.img;
-//                 content +=
-//                     `<div style="max-width: 18rem;">
-//               <img class="card-img-top" src="${imageSrc}" alt="Card image cap">
-//               <div class="card-body">
-//                 <h5 class="card-title">${p.name}</h5>
-//                 <p class="card-text">${p.desc}</p>
-//                 <p class="card-text">Intensity: ${p.effort}</p>
-//                 <p class="card-text">Elevation: ${p.elevation} feet </p>
-//               </div>
-//             </div>
-//             `;
-//             }
-//             document.querySelector("#shop2").innerHTML = content;
-//             console.log(content);
-//         });
-//     }
-// )
